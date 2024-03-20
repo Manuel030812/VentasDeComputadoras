@@ -10,7 +10,7 @@ public class Orden {
     private final List<Computadora> computadoras;
     private static int contadorOrden;
 
-    private Orden(){
+    public Orden(){
         computadoras = new ArrayList<>();
         this.idOrden =++contadorOrden;
     }
@@ -20,7 +20,6 @@ public class Orden {
     public void mostrarOrden(){
         System.out.println("Orden #: "+idOrden);
         System.out.println("Total computadoras: "+ computadoras.size());
-        System.out.println();
         computadoras.forEach(System.out::println);
     }
 }
